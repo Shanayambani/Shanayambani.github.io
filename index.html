@@ -567,7 +567,7 @@
                     <button class="resume-modal-close" id="resume-modal-close" aria-label="Close resume viewer">&times;</button>
                 </div>
             </div>
-            <embed data-src="ShanayAmbani_Resume_2026Final.pdf" type="application/pdf" title="Shanay Ambani Resume" class="resume-modal-iframe" id="resume-modal-iframe">
+            <div class="resume-modal-viewer" id="resume-modal-viewer" data-src="ShanayAmbani_Resume_2026Final.pdf"></div>
         </div>
     </div>
 
@@ -575,6 +575,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+    <!-- PDF.js dependency (renders resume with real clickable links) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="script.js?v=22"></script>
 </body>
 </html>

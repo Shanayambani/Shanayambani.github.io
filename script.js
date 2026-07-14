@@ -2,19 +2,107 @@
 // Shanay Ambani Portfolio - Main Script
 // ==========================================
 
-// --- Resume Viewer Modal ---
+// --- Resume Viewer Modal (rendered via PDF.js so hyperlinks work as real links) ---
 const resumeModalOverlay = document.getElementById('resume-modal-overlay');
 const resumeModalClose = document.getElementById('resume-modal-close');
-const resumeModalIframe = document.getElementById('resume-modal-iframe');
+const resumeModalViewer = document.getElementById('resume-modal-viewer');
 const resumeViewTriggers = document.querySelectorAll('#nav-resume-download, #hero-resume-download');
+let resumeRendered = false;
+
+if (window.pdfjsLib) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+}
+
+async function renderResumePdf() {
+    if (resumeRendered || !resumeModalViewer || !window.pdfjsLib) return;
+    resumeRendered = true;
+
+    try {
+        const url = resumeModalViewer.getAttribute('data-src');
+        const pdf = await pdfjsLib.getDocument(url).promise;
+
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+            const page = await pdf.getPage(pageNum);
+            const naturalViewport = page.getViewport({ scale: 1 });
+            const availableWidth = resumeModalViewer.clientWidth - 32; // minus padding
+            const scale = Math.min(2, Math.max(0.5, availableWidth / naturalViewport.width));
+            const viewport = page.getViewport({ scale });
+
+            const pageWrapper = document.createElement('div');
+            pageWrapper.className = 'resume-pdf-page';
+            pageWrapper.style.width = viewport.width + 'px';
+            pageWrapper.style.height = viewport.height + 'px';
+
+            const canvas = document.createElement('canvas');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            const ctx = canvas.getContext('2d');
+            pageWrapper.appendChild(canvas);
+
+            const linkLayer = document.createElement('div');
+            linkLayer.className = 'resume-pdf-links';
+            pageWrapper.appendChild(linkLayer);
+
+            resumeModalViewer.appendChild(pageWrapper);
+
+            await page.render({ canvasContext: ctx, viewport }).promise;
+
+            function addLink(url, x1, y1, x2, y2) {
+                const link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.className = 'resume-pdf-link';
+                link.style.left = Math.min(x1, x2) + 'px';
+                link.style.top = Math.min(y1, y2) + 'px';
+                link.style.width = Math.abs(x2 - x1) + 'px';
+                link.style.height = Math.abs(y2 - y1) + 'px';
+                linkLayer.appendChild(link);
+            }
+
+            // Real embedded PDF link annotations (if any)
+            const annotations = await page.getAnnotations();
+            annotations.forEach(annotation => {
+                if (annotation.subtype !== 'Link' || !annotation.url) return;
+                const rect = pdfjsLib.Util.normalizeRect(annotation.rect);
+                const [x1, y1] = viewport.convertToViewportPoint(rect[0], rect[1]);
+                const [x2, y2] = viewport.convertToViewportPoint(rect[2], rect[3]);
+                addLink(annotation.url, x1, y1, x2, y2);
+            });
+
+            // Fallback: detect plain-text email/LinkedIn/URL strings that were
+            // never embedded as real PDF link annotations, and make them clickable.
+            const textContent = await page.getTextContent();
+            const patterns = [
+                { re: /^[\w.+-]+@[\w-]+\.[\w.-]+$/, toUrl: (s) => 'mailto:' + s },
+                { re: /^(www\.)?linkedin\.com\/\S+$/i, toUrl: (s) => 'https://' + s.replace(/^www\./i, '') },
+                { re: /^(https?:\/\/)?(www\.)?[\w-]+\.[a-z]{2,}(\/\S*)?$/i, toUrl: (s) => (/^https?:\/\//i.test(s) ? s : 'https://' + s) }
+            ];
+            textContent.items.forEach(item => {
+                const str = item.str.trim();
+                if (!str) return;
+                const match = patterns.find(p => p.re.test(str));
+                if (!match) return;
+
+                // Standard PDF.js text-layer positioning: tx = viewport.transform * item.transform
+                const tx = pdfjsLib.Util.transform(viewport.transform, item.transform);
+                const fontHeight = Math.hypot(tx[2], tx[3]);
+                const width = item.width * Math.hypot(tx[0], tx[1]);
+                const x1 = tx[4];
+                const y1 = tx[5] - fontHeight;
+                addLink(match.toUrl(str), x1, y1, x1 + width, tx[5]);
+            });
+        }
+    } catch (err) {
+        console.error('Resume PDF render failed:', err);
+    }
+}
 
 function openResumeModal(e) {
     e.preventDefault();
-    if (resumeModalIframe && !resumeModalIframe.getAttribute('src')) {
-        resumeModalIframe.setAttribute('src', resumeModalIframe.getAttribute('data-src'));
-    }
     resumeModalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    renderResumePdf();
 }
 
 function closeResumeModal() {
