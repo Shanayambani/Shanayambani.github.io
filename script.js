@@ -207,18 +207,6 @@ function createSTLViewer(container) {
 
         const mesh = new THREE.Mesh(geometry, material);
 
-        // --- Render Sharp Edges (Outline Overlay) ---
-        // Threshold angle of 25 degrees defines when an edge is drawn
-        const edges = new THREE.EdgesGeometry(geometry, 25);
-        const lineMaterial = new THREE.LineBasicMaterial({
-            color: 0x334155, // Medium slate outlines for contrast on light body
-            linewidth: 1
-        });
-        const lineSegments = new THREE.LineSegments(edges, lineMaterial);
-        
-        // Add outline as child of mesh so they rotate/translate together
-        mesh.add(lineSegments);
-
         // Center Model Geometry
         geometry.computeBoundingBox();
         const bb = geometry.boundingBox;
