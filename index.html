@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanay Ambani | Mechanical Design & Mechatronics Portfolio</title>
+    <meta name="description" content="Engineering Portfolio of Shanay Ambani, Senior at Purdue University. Specialized in SolidWorks CAD, CFD analysis, mechatronics prototyping, and precision manufacturing.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+    <div class="scanline-overlay"></div>
+    
+    <nav class="sticky-header">
+        <div class="nav-container">
+            <a href="#" class="logo">S.AMBANI<span class="version">PORTFOLIO</span></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-item">ABOUT</a>
+                <a href="#skills" class="nav-item">SKILLS</a>
+                <a href="#experience" class="nav-item">EXPERIENCE</a>
+                <a href="#projects" class="nav-item">PROJECTS</a>
+                <a href="#cad-models" class="nav-item">CAD GALLERY</a>
+                <a href="#contact" class="nav-item">CONTACT</a>
+                <a href="resume.pdf" target="_blank" class="resume-btn" id="nav-resume-download">RESUME</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-status"><span class="pulse"></span> STUDENT PORTFOLIO // PURDUE MECHATRONICS</div>
+                <h1 class="fade-in">SHANAY AMBANI // <span class="accent">DESIGN</span></h1>
+                <p class="fade-in delay-1">Senior Mechatronics Engineering Technology student at <strong>Purdue University</strong>. Translating engineering theory into high-fidelity CAD, robust structural prototypes, and manufacturable designs.</p>
+                <div class="hero-actions fade-in delay-2">
+                    <a href="#projects" class="btn-primary">EXPLORE PROJECTS</a>
+                    <a href="resume.pdf" target="_blank" class="btn-secondary" id="hero-resume-download">VIEW RESUME</a>
+                    <a href="#contact" class="btn-tertiary">CONTACT ME</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="container fade-in-scroll">
+                <div class="section-tag">// BIOGRAPHY</div>
+                <h2 class="section-title">ABOUT ME</h2>
+                <div class="about-layout">
+                    <div class="about-text glass-panel">
+                        <p>Senior at <strong>Purdue University</strong> pursuing a <span class="data-point">B.S. in Mechatronics Engineering Technology</span> (Expected May 2026). I specialize in CAD modeling, physical prototyping, and mechatronic control system integration.</p>
+                        <p>My academic foundation spans Mechanics &amp; Materials, Automated Controls, Digital Electronics, and Design for Manufacturability (DFM). I thrive at the intersection of mechanical structures and electrical hardware—concepting, detailing, analyzing, and assembling physical prototypes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container fade-in-scroll">
+                <div class="section-tag">// INTERACTIVE EXPERTISE (TAP A SKILL CARD FOR DETAIL)</div>
+                <h2 class="section-title">TECHNICAL SKILLS</h2>
+                
+                <div class="skills-grid">
+                    <!-- Column 1: CAD, Software & Design (Merged) -->
+                    <div class="skills-column glass-panel highlight-col">
+                        <h3>CAD, SOFTWARE &amp; DESIGN</h3>
+                        <div class="skill-list">
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-solidworks">
+                                <span class="skill-name">SolidWorks</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-solidworks" class="skill-desc">
+                                    Used for design modeling in D&amp;O Motorsports bumper redesign, capstone RFID mounting systems, and Formula SAE layouts.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-autocad">
+                                <span class="skill-name">AutoCAD</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-autocad" class="skill-desc">
+                                    Utilized for drafting 2D electrical layouts, routing schematics, and mechanical profiles.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-inventor">
+                                <span class="skill-name">Inventor</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-inventor" class="skill-desc">
+                                    Created parameterized part assemblies and motion simulations for coursework mechanisms.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-gdt">
+                                <span class="skill-name">GD&amp;T</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-gdt" class="skill-desc">
+                                    Applied geometric tolerancing (ASME Y14.5) to sheet metal and machined parts to ensure perfect fitment.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-drawings">
+                                <span class="skill-name">Engineering Drawings</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-drawings" class="skill-desc">
+                                    Produced professional production drawings with bill of materials, detailed views, and assembly layouts.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-python">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-python" class="skill-desc">
+                                    Developed data-parsing scripts to analyze mechatronic sensor readings and automate data entry.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-matlab">
+                                <span class="skill-name">MATLAB</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-matlab" class="skill-desc">
+                                    Wrote dynamic simulation scripts for vibration analysis, mechatronic feedback loops, and numerical solvers.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-excel">
+                                <span class="skill-name">Excel</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-excel" class="skill-desc">
+                                    Constructed formulas for tolerance stack-up charts, structural load databases, and project budgets.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-powerpoint">
+                                <span class="skill-name">PowerPoint</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-powerpoint" class="skill-desc">
+                                    Designed technical progress review decks presented to university faculty and industry advisors.
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Analysis -->
+                    <div class="skills-column glass-panel">
+                        <h3>ANALYSIS</h3>
+                        <div class="skill-list">
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-fea">
+                                <span class="skill-name">Structural Analysis (FEA)</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-fea" class="skill-desc">
+                                    Performed FEA in SolidWorks Simulation to evaluate stress distributions and factor of safety under wind/torque loads.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-cfd">
+                                <span class="skill-name">CFD</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-cfd" class="skill-desc">
+                                    Evaluated aerodynamic parameters (drag, lift, pressure coefficients) on active spoiler concepts and bumper air curtains.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-tolerance">
+                                <span class="skill-name">Tolerance Analysis</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-tolerance" class="skill-desc">
+                                    Calculated worst-case and Root-Sum-Square (RSS) tolerance stack-ups for multi-part mechanical linkages.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-labview">
+                                <span class="skill-name">LabVIEW</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-labview" class="skill-desc">
+                                    Programmed virtual instruments (VIs) for temperature, strain, and velocity data collection via DAQ systems.
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Manufacturing -->
+                    <div class="skills-column glass-panel">
+                        <h3>MANUFACTURING</h3>
+                        <div class="skill-list">
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-dfm">
+                                <span class="skill-name">DFM</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-dfm" class="skill-desc">
+                                    Modified part designs to optimize tool clearances, reduce setup changes, and lower sheet metal bending costs.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-mfg-processes">
+                                <span class="skill-name">Manufacturing Processes</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-mfg-processes" class="skill-desc">
+                                    Gained hands-on experience selecting machining, laser cutting, casting, and injection molding parameters.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-scanning">
+                                <span class="skill-name">3D Scanning</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-scanning" class="skill-desc">
+                                    Scanned prototype parts with laser scanners, repaired meshes, and reverse-engineered complex curves into SolidWorks surfaces.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-prototyping">
+                                <span class="skill-name">Rapid Prototyping</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-prototyping" class="skill-desc">
+                                    Utilized FDM and SLA 3D printers, adapting wall thickness and infill densities for functional fit checks.
+                                </div>
+                            </button>
+                            <button class="skill-card" aria-expanded="false" aria-controls="skill-desc-fabrication">
+                                <span class="skill-name">Fabrication</span>
+                                <span class="skill-icon">+</span>
+                                <div id="skill-desc-fabrication" class="skill-desc">
+                                    Experienced with mill, lathe, sheet metal shear, press brake operations, and manual hand tools in workshop labs.
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container fade-in-scroll">
+                <div class="section-tag">// PROFESSIONAL HISTORY</div>
+                <h2 class="section-title">EXPERIENCE</h2>
+                <div class="experience-list">
+                    <div class="exp-item glass-panel">
+                        <div class="exp-header">
+                            <h3>D&amp;O Motorsports | Design Engineering Intern</h3>
+                            <span class="date">May 2025 - Aug 2025</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Reduced aerodynamic drag by <span class="data-point">4%</span> by redesigning a Honda City bumper using <strong>SolidWorks</strong> and validating performance with <strong>CFD analysis</strong> (ANSYS Fluent).</li>
+                            <li>Converted physical scan data of components into fully editable, surface-reconstructed CAD models.</li>
+                            <li>Designed, 3D printed, and hand-fabricated aerodynamics prototype parts matching a tight <span class="data-point">&plusmn;0.5 mm</span> geometry tolerance limit.</li>
+                            <li>Evaluated structural stability and ease of installation through physical wind tunnel and road test feedback.</li>
+                        </ul>
+                        
+                        <!-- Technical Expandable Drawer -->
+                        <div class="tech-drawer-wrapper">
+                            <button class="tech-toggle" aria-expanded="false" aria-controls="exp-tech-1">
+                                <span class="toggle-text">SHOW TECHNICAL DETAILS</span>
+                                <span class="toggle-arrow"></span>
+                            </button>
+                            <div id="exp-tech-1" class="tech-content-panel">
+                                <div class="tech-grid">
+                                    <div class="tech-tools">
+                                        <strong>Specific Tools &amp; Hardware:</strong>
+                                        <p>SolidWorks (Surfacing &amp; Part Modeling), ANSYS Fluent (CFD), Creality FDM 3D Printers, 3D Scan FaroArm, Dial Calipers, Vernier Gauges.</p>
+                                    </div>
+                                    <div class="tech-simple">
+                                        <strong>Simplified Explanation:</strong>
+                                        <p>I reshaped the front bumper of a test car to guide air more cleanly around the front wheels. This reduces wind resistance (drag), meaning the car uses less fuel to travel at high speeds. I scanned the original car shape, drew up the new design, printed test models, and checked they fit perfectly on the real vehicle.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-item glass-panel">
+                        <div class="exp-header">
+                            <h3>L.I.M.E (Launchpad for Indian Motorsport Engineers) | Fellow and Intern</h3>
+                            <span class="date">May 2024 - Aug 2024</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Completed an intensive 80-hour motorsport engineering cohort focusing on CAD geometry, mechanical linkages, and vehicle handling setups.</li>
+                            <li>Selected as one of <span class="data-point">70 fellows</span> nationally based on mechanical design tests and geometric reasoning.</li>
+                            <li>Increased CAD model capture accuracy by <span class="data-point">10%</span> by applying mesh-alignment routines during automotive surface reverse engineering.</li>
+                            <li>Analyzed suspension link kinematics and optimized bracket geometry to accommodate standard hardware constraints.</li>
+                        </ul>
+
+                        <!-- Technical Expandable Drawer -->
+                        <div class="tech-drawer-wrapper">
+                            <button class="tech-toggle" aria-expanded="false" aria-controls="exp-tech-2">
+                                <span class="toggle-text">SHOW TECHNICAL DETAILS</span>
+                                <span class="toggle-arrow"></span>
+                            </button>
+                            <div id="exp-tech-2" class="tech-content-panel">
+                                <div class="tech-grid">
+                                    <div class="tech-tools">
+                                        <strong>Specific Tools &amp; Hardware:</strong>
+                                        <p>SolidWorks (Assembly &amp; Motion Study), Autodesk Inventor, 3D Mesh Cleanup (Geomagic), Vernier Hand Tools, Suspension Kinematics Spreadsheets.</p>
+                                    </div>
+                                    <div class="tech-simple">
+                                        <strong>Simplified Explanation:</strong>
+                                        <p>I participated in a selective training program where I learned how race cars are modeled and built. I practiced taking physical metal parts, measuring them precisely with hand tools, and building matching 3D models on the computer, ensuring parts wouldn't run into each other when the suspension moves up and down.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container fade-in-scroll">
+                <div class="section-tag">// CASE STUDIES</div>
+                <h2 class="section-title">PROJECTS</h2>
+                <div class="project-single-col-grid">
+                    
+                    <div class="project-card glass-panel">
+                        <div class="card-header">
+                            <h3>Senior Design Capstone (Purdue University) | Mechanical Design Lead</h3>
+                        </div>
+                        <div class="technical-summary">Aug 2025 - May 2026 // RFID Mounting Platform Assembly</div>
+                        <div class="project-body">
+                            <ul class="exp-bullets">
+                                <li>Conceptualized and modeled an adjustable RFID platform bracket assembly achieving a <span class="data-point">21 ft</span> scanning detection envelope.</li>
+                                <li>Developed multi-view engineering drawings specifying ANSI tolerancing (GD&amp;T) to guide sheet metal fabrication and structural welding.</li>
+                                <li>Validated structural integrity under a severe <span class="data-point">8.7 lb-ft</span> system torque and 30 mph outdoor wind gust load using <strong>SolidWorks Simulation (FEA)</strong>.</li>
+                                <li>Optimized mounting stiffness to reduce system mechanical vibration deflection by <span class="data-point">18%</span>.</li>
+                            </ul>
+                            
+                            <!-- Technical Expandable Drawer -->
+                            <div class="tech-drawer-wrapper">
+                                <button class="tech-toggle" aria-expanded="false" aria-controls="proj-tech-1">
+                                    <span class="toggle-text">SHOW TECHNICAL DETAILS</span>
+                                    <span class="toggle-arrow"></span>
+                                </button>
+                                <div id="proj-tech-1" class="tech-content-panel">
+                                    <div class="tech-grid">
+                                        <div class="tech-tools">
+                                            <strong>Specific Tools &amp; Hardware:</strong>
+                                            <p>SolidWorks (Structural Weldments &amp; Sheet Metal), SolidWorks Simulation (Linear Static FEA), ANSI Y14.5 GD&amp;T Standards, CNC Plasma Cutter, TIG Welder.</p>
+                                        </div>
+                                        <div class="tech-simple">
+                                            <strong>Simplified Explanation:</strong>
+                                            <p>I designed a heavy-duty metal bracket to hold a wireless scanner (RFID) high off the ground. Because it sits outside, I used computer modeling to make sure strong wind gusts won't bend the metal or cause the scanner to shake too much, which would disrupt tracking. I then created the assembly plans for the shop to cut, fold, and weld the steel parts together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-panel">
+                        <div class="card-header">
+                            <h3>Skoda Superb Rear Spoiler Concept | Shadow Intern</h3>
+                        </div>
+                        <div class="technical-summary">Dec 2024 - Jan 2025 // Aerodynamic diffuser analysis</div>
+                        <div class="project-body">
+                            <ul class="exp-bullets">
+                                <li>Assisted in designing a rear spoiler and air diffuser profile to increase high-speed downforce and vehicle stability.</li>
+                                <li>Constructed streamlined aerodynamic CAD profiles and evaluated air pressure drag coefficients using <strong>CFD fluid models</strong>.</li>
+                                <li>Applied optimized airfoil parameters to a conceptual front bumper splitter kit for downforce balancing.</li>
+                            </ul>
+
+                            <!-- Technical Expandable Drawer -->
+                            <div class="tech-drawer-wrapper">
+                                <button class="tech-toggle" aria-expanded="false" aria-controls="proj-tech-2">
+                                    <span class="toggle-text">SHOW TECHNICAL DETAILS</span>
+                                    <span class="toggle-arrow"></span>
+                                </button>
+                                <div id="proj-tech-2" class="tech-content-panel">
+                                    <div class="tech-grid">
+                                        <div class="tech-tools">
+                                            <strong>Specific Tools &amp; Hardware:</strong>
+                                            <p>SolidWorks (Complex loft curves), ANSYS CFX (Computational Fluid Dynamics), Flow Trajectory Visualization, Airfoil Parameter Solvers.</p>
+                                        </div>
+                                        <div class="tech-simple">
+                                            <strong>Simplified Explanation:</strong>
+                                            <p>I modeled a rear wing and bumper attachment for a passenger car. I simulated air blowing past the car at highway speeds to make sure the wing pushes the back of the car down slightly (creating downforce) to help it stick to the road better around corners, without adding too much extra air resistance which would hurt fuel economy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-panel">
+                        <div class="card-header">
+                            <h3>Formula SAE Selection Project (Chain Drive System) | Purdue University</h3>
+                        </div>
+                        <div class="technical-summary">Sep 2024 - Oct 2024 // Drivetrain alignment study</div>
+                        <div class="project-body">
+                            <ul class="exp-bullets">
+                                <li>Designed custom sprocket profiles and a mounting plate for a chain drive transmission system in <strong>SolidWorks</strong>.</li>
+                                <li>Performed a detailed tolerance stack-up analysis to ensure drive gear alignment within critical limits.</li>
+                                <li>Generated dimensioned shop-ready orthographic sheets detailing bore tolerances and component clearances.</li>
+                            </ul>
+
+                            <!-- Technical Expandable Drawer -->
+                            <div class="tech-drawer-wrapper">
+                                <button class="tech-toggle" aria-expanded="false" aria-controls="proj-tech-3">
+                                    <span class="toggle-text">SHOW TECHNICAL DETAILS</span>
+                                    <span class="toggle-arrow"></span>
+                                </button>
+                                <div id="proj-tech-3" class="tech-content-panel">
+                                    <div class="tech-grid">
+                                        <div class="tech-tools">
+                                            <strong>Specific Tools &amp; Hardware:</strong>
+                                            <p>SolidWorks (Equations-driven sprocket profile, Assemblies), ASME standard drawings, Tolerance stack-up calculations (worst-case math).</p>
+                                        </div>
+                                        <div class="tech-simple">
+                                            <strong>Simplified Explanation:</strong>
+                                            <p>I designed the chain-and-gear system that transfers power to a small race car's rear wheels. Since even a tiny misalignment can cause the chain to snap or slip off, I calculated the maximum amount each metal part could be off-size and still align perfectly, drawing up detailed blueprints for fabrication.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CAD Models & WIP Image Showcase Section -->
+        <section id="cad-models" class="cad-models-section">
+            <div class="container fade-in-scroll">
+                <div class="section-tag">// 3D VISUALIZATION &amp; ACTIVE DESIGNS</div>
+                <h2 class="section-title">CAD GALLERY</h2>
+                
+                <!-- WIP Banner Block -->
+                <div class="wip-showcase-panel glass-panel">
+                    <div class="wip-layout">
+                        <div class="wip-img-box">
+                            <img src="work_in_progress.png" alt="Current Work in Progress: RFID Capstone CAD Assembly on lab bench" class="wip-image">
+                        </div>
+                        <div class="wip-text-box">
+                            <div class="wip-badge"><span class="pulse"></span> CURRENT WORK IN PROGRESS</div>
+                            <h3>RFID Antenna Mount &amp; Structural Stand</h3>
+                            <p>This layout shows the ongoing Capstone assembly. The design consists of lightweight structural 8020 aluminum extrusions supporting a custom-bent steel mounting bracket. TIG-welded structural plates are placed at stress concentrations (joints) to handle torque from outdoor wind loads. The bracket features circular slot patterns allowing dual-axis angle adjustments for maximum signal propagation.</p>
+                            <div class="wip-specs">
+                                <span class="spec-tag">Assembly Mass: 14.2 lbs</span>
+                                <span class="spec-tag">Stiffness: 420 N/mm</span>
+                                <span class="spec-tag">Wind Load Limit: 30 mph</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D STL viewers (Curated to 4 strongest models, no file names or underscores) -->
+                <div class="cad-viewers-grid">
+                    
+                    <div class="project-card glass-panel interactive-card">
+                        <div class="card-header">
+                            <h3>1. Final Prototype Assembly</h3>
+                        </div>
+                        <div class="technical-summary">Type: Full Assembly Model // Material: Aluminum Extrusion &amp; Steel Plate</div>
+                        <div class="stl-viewer" data-model="Final_Prototype.stl" id="viewer-final-prototype"></div>
+                        <p class="model-description">Fully assembled mechanical test stand. Combines aluminum extrusion framing, base anchoring, and sensor adapter bracketry.</p>
+                    </div>
+
+                    <div class="project-card glass-panel interactive-card">
+                        <div class="card-header">
+                            <h3>2. Capstone Mounting Bracket</h3>
+                        </div>
+                        <div class="technical-summary">Type: Sheet Metal Component // Material: Mild Steel Plate</div>
+                        <div class="stl-viewer" data-model="Prototype.stl" id="viewer-prototype"></div>
+                        <p class="model-description">Custom-bent steel mounting plate featuring slotted holes for sensor alignment adjustments and bolt-pattern integration.</p>
+                    </div>
+
+                    <div class="project-card glass-panel interactive-card">
+                        <div class="card-header">
+                            <h3>3. Pivot Joint Hinge</h3>
+                        </div>
+                        <div class="technical-summary">Type: Hinge Bracket // Material: CNC Machined Alloy</div>
+                        <div class="stl-viewer" data-model="Assem1_pivot_shanayambani.stl" id="viewer-pivot"></div>
+                        <p class="model-description">Mechanical hinge bracket supporting multi-degree angular movement of capstone sensor mounts.</p>
+                    </div>
+
+                    <div class="project-card glass-panel interactive-card">
+                        <div class="card-header">
+                            <h3>4. Aerodynamic Front Splitter</h3>
+                        </div>
+                        <div class="technical-summary">Type: Aero Surface // Reconstruction: 3D Laser Scan Mesh</div>
+                        <div class="stl-viewer" data-model="Shanay_CityBumper.stl" id="viewer-bumper"></div>
+                        <p class="model-description">Aerodynamic bumper splitter surface, reconstructed from laser scan points, to reduce air turbulence underneath the vehicle.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Peer Review Section -->
+        <section id="peer-review" class="peer-review-section">
+            <div class="container fade-in-scroll">
+                <div class="section-tag">// RECOMMENDATIONS</div>
+                <h2 class="section-title">PEER REVIEW</h2>
+                <div class="reviews-list">
+                    <div class="review-block glass-panel">
+                        <span class="quote-mark">"</span>
+                        <p>Shanay was a key driver of our team's success. Serving as our Mechanical Design Lead, he consistently brought a strong combination of technical skill and practical engineering judgment. He didn't just design components, he made sure every decision accounted for real-world conditions like wind loads, durability, cost, and ease of deployment. His ability to think beyond theory and focus on how the system would actually perform in a race-day environment made a huge difference.</p>
+                        <p>One thing that stood out was how intentional he was with design optimization. Whether it was refining the antenna positioning for better coverage or reworking the structure to improve stability while reducing material usage, his decisions were always backed by solid analysis and clear reasoning.</p>
+                        <div class="reviewer">- Zachary Danek, Purdue University Capstone Partner</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container fade-in-scroll">
+                <div class="section-tag">// COMMUNICATIONS</div>
+                <h2 class="section-title">CONTACT</h2>
+                <div class="contact-grid">
+                    
+                    <div class="contact-card glass-panel">
+                        <span class="label">EMAIL ADDRESS</span>
+                        <a href="mailto:shanay.ambani4@gmail.com" class="value select-text">shanay.ambani4@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-card glass-panel">
+                        <span class="label">PHONE NUMBER</span>
+                        <a href="tel:7657673306" class="value select-text">(765) 767-3306</a>
+                    </div>
+                    
+                    <div class="contact-card glass-panel">
+                        <span class="label">LINKEDIN PROFILE</span>
+                        <a href="https://linkedin.com/in/shanayambani" target="_blank" class="value select-text">in/shanayambani</a>
+                    </div>
+
+                    <div class="contact-card glass-panel download-card">
+                        <span class="label">OFFICIAL RESUME</span>
+                        <a href="resume.pdf" target="_blank" class="value select-text download-link" download="Shanay_Ambani_Resume.pdf">DOWNLOAD RESUME (PDF)</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-left">&copy; 2026 S.AMBANI // PURDUE UNIVERSITY SENIOR PORTFOLIO // ALL RIGHTS RESERVED</div>
+                <div class="footer-right">STATUS: <span class="data-point">RECRUITER READY</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+    <script src="script.js?v=22"></script>
+</body>
+</html>
