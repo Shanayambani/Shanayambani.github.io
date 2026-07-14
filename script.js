@@ -10,6 +10,9 @@ const resumeViewTriggers = document.querySelectorAll('#nav-resume-download, #her
 
 function openResumeModal(e) {
     e.preventDefault();
+    if (resumeModalIframe && !resumeModalIframe.getAttribute('src')) {
+        resumeModalIframe.setAttribute('src', resumeModalIframe.getAttribute('data-src'));
+    }
     resumeModalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
 }
