@@ -812,11 +812,12 @@ footer {
     .nav-container {
         flex-direction: column;
         gap: 0.5rem;
+        min-width: 0;
     }
     .logo {
         font-size: 1.1rem;
     }
-    
+
     /* Horizontal scrolling mobile navigation bar */
     .nav-links {
         display: flex;
@@ -824,6 +825,7 @@ footer {
         align-items: center;
         gap: 0.75rem;
         width: 100%;
+        min-width: 0;
         overflow-x: auto;
         padding: 0.2rem 0.5rem 0.5rem;
         -webkit-overflow-scrolling: touch;
