@@ -2,6 +2,43 @@
 // Shanay Ambani Portfolio - Main Script
 // ==========================================
 
+// --- Resume Viewer Modal ---
+const resumeModalOverlay = document.getElementById('resume-modal-overlay');
+const resumeModalClose = document.getElementById('resume-modal-close');
+const resumeModalIframe = document.getElementById('resume-modal-iframe');
+const resumeViewTriggers = document.querySelectorAll('#nav-resume-download, #hero-resume-download');
+
+function openResumeModal(e) {
+    e.preventDefault();
+    resumeModalOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeResumeModal() {
+    resumeModalOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+resumeViewTriggers.forEach(trigger => {
+    trigger.addEventListener('click', openResumeModal);
+});
+
+if (resumeModalClose) {
+    resumeModalClose.addEventListener('click', closeResumeModal);
+}
+
+if (resumeModalOverlay) {
+    resumeModalOverlay.addEventListener('click', (e) => {
+        if (e.target === resumeModalOverlay) closeResumeModal();
+    });
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && resumeModalOverlay.classList.contains('open')) {
+        closeResumeModal();
+    }
+});
+
 // --- Smooth Scrolling for Navigation ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
