@@ -658,6 +658,12 @@ section:nth-of-type(odd) {
 }
 
 /* Peer Review */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
 .review-block {
     text-align: center;
     max-width: 850px;
