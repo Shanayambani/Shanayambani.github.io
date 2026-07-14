@@ -696,7 +696,7 @@ section:nth-of-type(odd) {
 /* Contact Section with Copyable Text */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -734,17 +734,6 @@ section:nth-of-type(odd) {
 
 .contact-card .value:hover {
     color: var(--accent-orange);
-}
-
-.download-card {
-    border-color: var(--accent-orange);
-    background: rgba(255, 87, 34, 0.02);
-}
-
-.download-link {
-    color: var(--accent-orange) !important;
-    border-bottom: 1px dashed var(--accent-orange);
-    width: fit-content;
 }
 
 /* Footer */
